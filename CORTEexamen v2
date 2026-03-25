@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char codigo[20];
+    char nombre[50];
+    char inicial;
+    int edad;
+
+    printf("Programa de CRISTOPHER.\n");
+    printf("Por favor responda las siguientes preguntas.\n");
+
+    printf("Ingrese su codigo: ");
+    scanf("%s", codigo);
+
+    if (strncmp(codigo, "20261005", 8) == 0) {
+
+        printf("Ingrese su nombre: ");
+        scanf("%s", nombre);
+
+        printf("Ingrese la inicial de su apellido: ");
+        scanf(" %c", &inicial);
+
+        // 🔹 Operador ternario
+        (inicial >= 'A' && inicial <= 'Z') 
+            ? printf("Inicial en mayuscula\n") 
+            : printf("Inicial en minuscula\n");
+
+        printf("Ingrese su edad: ");
+        scanf("%d", &edad);
+
+        printf("%s %c - %s - %d anos.\n", nombre, inicial, codigo, edad);
+
+    } else {
+        printf("Usted no pertenece a esta clase.\n");
+    }
+
+    return 0;
+}
+
