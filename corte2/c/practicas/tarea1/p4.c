@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int opcion; //guarda la opcion seleccionada
+
+    do {
+printf("\nMENU\n");
+printf("1. saludar\n");
+printf("2. despedirse\n");
+printf("0. salir\n");
+printf("seleccione una opcion: ");
+scanf("%d", &opcion);
+
+if (opcion == 1) {
+  printf("hola.\n");
+} else if  (opcion ==2) {
+  printf ("hasta luego. \n");
+} else if  (opcion == 0) {
+  printf("fin del programa. \n");
+} else {
+  printf("opcion invalida. \n");
+}
+
+}while (opcion != 0); //repite mientras no se elija salir
+
+return 0;
+}
+
