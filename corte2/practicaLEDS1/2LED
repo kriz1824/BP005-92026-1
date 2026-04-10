@@ -1,0 +1,18 @@
+const int LED1 = 2; // Primer LED
+2 const int LED2 = 4; // Segundo LED
+3
+4 void setup() {
+5 pinMode(LED1, OUTPUT); // Configura LED1
+6 pinMode(LED2, OUTPUT); // Configura LED2
+7 }
+8
+9 void loop() {
+10 digitalWrite(LED1, HIGH); // Enciende LED1
+11 digitalWrite(LED2, LOW); // Apaga LED2
+12 delay(400); // Espera
+13
+14 digitalWrite(LED1, LOW); // Apaga LED1
+15 digitalWrite(LED2, HIGH); // Enciende LED2
+16 delay(400); // Espera
+17 }
+Material
