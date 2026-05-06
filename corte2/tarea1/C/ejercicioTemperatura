@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/* Prototipo */
+float convertirAFahrenheit(float celsius);
+
+int main() {
+    /* Declaración de variables */
+    float celsius, fahrenheit;
+
+    /* Entrada de datos */
+    printf("Digite la temperatura en Celsius: ");
+    scanf("%f", &celsius);
+
+    /* Llamada a la función */
+    fahrenheit = convertirAFahrenheit(celsius);
+
+    /* Presentación de resultados */
+    printf("Temperatura en Fahrenheit: %.2f\n", fahrenheit);
+
+    return 0;
+}
+
+/* Definición de la función */
+float convertirAFahrenheit(float celsius) {
+    return (9.0/5.0) * celsius + 32;
+}
