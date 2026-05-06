@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+/* Prototipo */
+float convertirAFahrenheit(float celsius);
+
+int main() {
+    /* Declaración de variables */
+    float celsius, fahrenheit;
+
+    /* Entrada de datos */
+    cout << "Digite la temperatura en Celsius: ";
+    cin >> celsius;
+
+    /* Llamada a la función */
+    fahrenheit = convertirAFahrenheit(celsius);
+
+    /* Presentación de resultados */
+    cout << "Temperatura en Fahrenheit: " << fahrenheit << endl;
+
+    return 0;
+}
+
+/* Definición de la función */
+float convertirAFahrenheit(float celsius) {
+    return (9.0/5.0) * celsius + 32;
+}
