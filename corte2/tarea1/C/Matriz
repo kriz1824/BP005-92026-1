@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+/* Prototipos */
+void leerMatriz(int m[][3], int filas);
+void mostrarMatriz(int m[][3], int filas);
+int sumarMatriz(int m[][3], int filas);
+
+int main() {
+    /* Declaración de variables */
+    int m[3][3];
+    int suma;
+
+    /* Llamadas a funciones */
+    leerMatriz(m, 3);
+    mostrarMatriz(m, 3);
+    suma = sumarMatriz(m, 3);
+
+    /* Presentación de resultados */
+    printf("\nSuma total: %d\n", suma);
+
+    return 0;
+}
+
+/* Definición de funciones */
+
+void leerMatriz(int m[][3], int filas) {
+    int i, j;
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Digite m[%d][%d]: ", i, j);
+            scanf("%d", &m[i][j]);
+        }
+    }
+}
+
+void mostrarMatriz(int m[][3], int filas) {
+    int i, j;
+    printf("\nMatriz:\n");
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int sumarMatriz(int m[][3], int filas) {
+    int suma = 0;
+    int i, j;
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < 3; j++) {
+            suma += m[i][j];
+        }
+    }
+    return suma;
+}
